@@ -1,0 +1,71 @@
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body {
+  background-image: url("/images/pdbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3vh;
+  border-bottom: 1px solid #ccc;
+  backdrop-filter: blur(1px);
+}
+
+.boothBox {
+  width: 100%;
+  height: calc(100vh - 6vh);
+
+  .booth {
+    width: 100%;
+    height: calc(100% / 4);
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    backdrop-filter: blur(2px);
+
+    & > .inner {
+      .imgBox {
+        position: absolute;
+        left: 5%;
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0 0 0 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }// img
+      }// imgBox
+
+      .boothName {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        font-size: 3.5vh;
+      }// boothName
+
+      .boothExplainBtnWrapp {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        font-size: 3vh;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }// boothExplainBtnWrapp
+    }// inner
+  }// booth
+}// boothBox
